@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from pubnub.callbacks import SubscribeCallback
 from pubnub.enums import PNStatusCategory
 from pubnub.pnconfiguration import PNConfiguration
@@ -8,10 +10,11 @@ pnconfig = PNConfiguration()
 
 pnconfig.subscribe_key = 'sub-c-52a9ab50-291b-11e5-baaa-0619f8945a4f'
 
+path='/bitlog/'
 
 class MySubscribeCallback(SubscribeCallback):
     def writeMessage(self, Key, message):
-        with open(datetime.now().date().strftime("%Y-%m-%d") + ".log", "a") as file:
+        with open(path + datetime.now().date().strftime("%Y-%m-%d") + ".log", "a") as file:
             line = Key + " " + "{0:%Y-%m-%d %H:%M:%S}".format(datetime.now()) + " "+ str(message) + "\n";
             file.write(line);
 

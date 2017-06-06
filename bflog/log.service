@@ -1,0 +1,10 @@
+[Unit]
+Description = Bitflyer Loging daemon
+
+[Service]
+ExecStart = /opt/loghistory.py
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
