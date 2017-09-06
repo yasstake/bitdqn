@@ -1,0 +1,11 @@
+[Unit]
+Description = Bitflyer FX Loging daemon
+
+[Service]
+ExecStart = /opt/fxloghistory.py
+Restart = always
+Type = simple
+
+[Install]
+WantedBy = multi-user.target
+
