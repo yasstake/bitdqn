@@ -10,7 +10,7 @@ pnconfig = PNConfiguration()
 
 pnconfig.subscribe_key = 'sub-c-52a9ab50-291b-11e5-baaa-0619f8945a4f'
 
-path='/bflog/FX-'
+path='/bitlog/FX-'
 
 C_FX_SNAPSHOT = 'lightning_board_snapshot_FX_BTC_JPY'
 C_FX_BOARD    = 'lightning_board_FX_BTC_JPY'
