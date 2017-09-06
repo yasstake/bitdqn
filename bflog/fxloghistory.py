@@ -26,9 +26,6 @@ class LogListener(SubscribeCallback):
         pass  # handle incoming presence data
 
     def status(self, pubnub, status):
-        print '--------'
-        print status.category
-
         if status.category == PNStatusCategory.PNUnexpectedDisconnectCategory:
             pubnub.reconnect()
             pass  # This event happens when radio / connectivity is lost
